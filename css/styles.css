@@ -1,100 +1,337 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
-:root{
-    --yellow: #f9ca24; 
+:root {
+  --yellow: #f9ca24;
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins",Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    text-transform: capitalize;
-    outline: none;
-    transition: all .2s linear;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: capitalize;
+  outline: none;
+  transition: all 0.2s linear;
+}
+
+*::selection {
+  background: var(--yellow);
+  color: #333;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #222;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+body {
+  background: #111;
+  overflow-x: hidden;
+  padding-left: 30rem; /* This will make sense later, add this property after adding .home section */
+}
+
+section {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 3rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 2rem;
+  border-radius: 5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn i {
+  padding: 0.2rem 0.7rem;
+  font-size: 1.8rem;
+}
+
+.btn:hover {
+  background: var(--yellow);
+  color: #fff;
+}
+
+.heading {
+  text-align: center;
+  margin: 0 4rem;
+  font-size: 4rem;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #fff4;
+  color: #fff;
+}
+
+.heading span {
+  color: var(--yellow);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 35rem;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+header .user img {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 0.7rem solid var(--yellow);
+}
+
+header .user .name {
+  font-size: 2rem;
+  color: #fff;
+}
+
+header .user .post {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+header .navbar {
+  width: 80%;
+}
+
+header .navbar ul {
+  list-style: none;
+  padding: 0.5rem 1.5rem;
+}
+
+header .navbar ul li a {
+  display: block;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  background: #333;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 5rem;
+}
+
+header .navbar ul li a:hover {
+  background-color: var(--yellow);
+}
+
+#menu {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: #333;
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 1rem 1.5rem;
+  z-index: 1000;
+  display: none;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  /* flex-flow: column; */
+  flex-direction: column;
+  padding: 0 10rem;
+  color: #fff;
+}
+
+.home h3 {
+  font-size: 2rem;
+}
+
+.home h1 {
+  font-size: 3rem;
+}
+
+.home h1 span {
+  color: var(--yellow);
+}
+
+.home p {
+  font-size: 1.7rem;
+  padding: 1rem 0;
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.about .row .info {
+  flex: 1 1 48rem;
+  padding: 2rem 1rem;
+  padding-left: 6rem;
+}
+
+.about .row .info h3 {
+  font-size: 2rem;
+  color: var(--yellow);
+  padding: 1rem 0;
+  font-weight: normal;
+}
+
+.about .row .info h3 span {
+  color: #eee;
+  padding: 0 0.5rem;
+}
+
+.about .row .counter {
+  display: flex;
+  flex: 1 1 48rem;
+  padding: 2rem 1rem;
+  justify-content: center;
+}
+
+.about .row .counter .box {
+  width: 16rem;
+  background: #222;
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.about .row .counter .box span{
+  font-size: 4rem;
+  color: var(--yellow);
+}
+
+.about .row .counter .box h3{
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Portfolio */
+
+.portfolio .box-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.portfolio .box-container .box{
+  height: 20rem;
+  width:  26rem;
+  border-radius: 1rem;
+  margin: 2rem;
+  overflow: hidden;
+  cursor: pointer
+}
+
+.portfolio .box-container .box img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all .3s ease-in-out;
+}
+
+.portfolio .box-container .box:hover img{
+  transform: scale(1.1);
+
+}
+
+.contact .row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact .row .content{
+  flex: 1 1 30rem;
+  padding: 4rem;
+  padding-bottom: 0;
+}
+
+.contact .row form{
+  flex: 1 1 45rem;
+  padding: 2rem;
+  margin: 2rem;
+  margin-bottom: 4rem; 
 }
 
 
-*::selection{
-    background:var(--yellow);
-    color:#333;
+
+
+
+
+
+/* media query */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+  .home {
+    padding: 1rem 4rem;
+  }
 }
 
-html{
-    font-size: 62.5%;
-    overflow-x:hidden;
-}
-
-html::-webkit-scrollbar{
-    width: 1.4rem;
-}
-
-html::-webkit-scrollbar-track{
-    background: #222;
-}
-
-html::-webkit-scrollbar-thumb{
-    background: var(--yellow);
-}
-
-body{
-    background: #111;
-    overflow-x: hidden;
-}
-
-header{
-    position: fixed;
-    top: 0; left: 0;
-    z-index: 1000;
-    height: 100%;
-    width: 35rem;
-    background: #1a1a1a;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    flex-flow: column;
-    text-align: center;
-}
-
-header .user img{
-    height: 17rem;
-    width: 17rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: .7rem solid var(--yellow);
-}
-
-header .user .name{
-    font-size: 3.5rem;
-    color: #fff;
-}
-
-header .user .post{
-    font-size: 1.5rem;
-    color: #fff;
-}
-
-header .navbar{
-    width: 100%;
-}
-
-header .navbar ul{
-    list-style: none;
-    padding: 1rem 3rem;
-}
-
-header .navbar ul li a{
+@media (max-width: 991px) {
+  header {
+    left: -120%;
+  }
+  #menu {
     display: block;
-    padding: 1rem;
-    margin: 1.5rem 0;
-    background: #333;
-    color: #fff;
-    font-size: 2rem;
-    border-radius: 5rem;
+  }
+  header.toggle {
+    left: 0;
+  }
+  body {
+    padding: 0;
+  }
 }
 
-header .navbar ul li a:hover{
-    background-color: var(--yellow);
+@media (max-width: 770px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    width: 100vw;
+  }
+
+  .heading{
+    margin: 0 3rem;
+  }
+
+  .about .row .counter .box{
+    width: 100%;
+  }
+
+  .portfolio .box-container .box {
+    width: 100%;
+  }  
+
 }
