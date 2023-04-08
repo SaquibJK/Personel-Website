@@ -2,6 +2,7 @@
 
 :root {
   --blue: #1786e7;
+  --gradient1: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
 }
 
 * {
@@ -101,10 +102,12 @@ header {
 header .user img {
   height: 13rem;
   width: 13rem;
-  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 0.7rem solid var(--blue);
+  border-radius: 50%;
+  background:  linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  border: .75rem solid transparent;
+  border-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%) 1;
 }
 
 header .user .name {
@@ -114,7 +117,10 @@ header .user .name {
 
 header .user .post {
   font-size: 1.3rem;
-  color: var(--blue);
+  background: var(--gradient1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:700;
 }
 
 header .navbar {
@@ -172,7 +178,9 @@ header .navbar ul li a:hover {
 }
 
 .home h1 span {
-  color: var(--blue);
+   background: var(--gradient1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .home p {
