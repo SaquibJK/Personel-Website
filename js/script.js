@@ -17,10 +17,11 @@ const links = document.querySelectorAll(".nav-link");
 
 links.forEach((link) => {
   link.addEventListener("click", (event) => {
-      event.preventDefault();
-      const target = document.querySelector(link.getAttribute("href"));
-      console.log(target)
+    event.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
     target.scrollIntoView({ behavior: "smooth" });
+    header.classList.remove('toggle')
+    menu.classList.remove("fa-times");
   });
 });
 

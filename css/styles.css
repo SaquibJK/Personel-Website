@@ -447,7 +447,9 @@ header .navbar ul li a:hover {
   }
 
   .portfolio .box-container .box {
-    width: 100%;
+    display: block;
+     height: 25rem;
+     width:  35rem;
   }  
 
   .contact .row form{
