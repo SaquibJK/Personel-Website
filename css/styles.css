@@ -251,7 +251,8 @@ header .navbar ul li a:hover {
 }
 
 .portfolio .box-container .box{
-  height: 22rem;
+  /* height: 22rem; */
+  height: auto;
   width:  26rem;
   border-radius: 1rem;
   margin: 2rem;
@@ -273,6 +274,7 @@ header .navbar ul li a:hover {
 .portfolio .box-container .box .box-desc{
   background-color: hwb(0 0% 100%);
   border-radius: 0 0 1rem 1rem;
+
 }
 
 .portfolio .box-container .box .box-desc h3 {
