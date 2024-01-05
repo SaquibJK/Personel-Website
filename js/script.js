@@ -68,7 +68,7 @@ function calculateAge(birthdate) {
   return age;
 }
 
-// Your birthdate
+// Current Age
 const birthdate = "2004-04-28";
 const ageSpan = document.querySelector(".Age");
 ageSpan.innerHTML = calculateAge(birthdate);
